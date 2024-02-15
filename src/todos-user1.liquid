@@ -1,0 +1,12 @@
+---
+title: Todos for User 1
+layout: base
+---
+<main>
+    <ul>
+        {% for td in todosuser1 %}
+        <li class="todo completed {{ td.completed }}">{{ td.title }}</li>
+        {% endfor %}
+    </ul>
+   
+</main>

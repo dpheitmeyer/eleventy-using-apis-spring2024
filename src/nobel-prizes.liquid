@@ -1,0 +1,15 @@
+---
+title: Nobel Prizes
+layout: base
+---
+<main>
+    {% for prize in nobelPrizes.nobelPrizes %}
+        <h2>{{ prize.awardYear }} {{ prize.category.en }}</h2>
+        {%- for laureate in prize.laureates -%}
+          {{- laureate.knownName.en -}}
+          {{- laureate.orgName.en -}}
+        {% if forloop.last == false  %},&#160;{% endif %}
+        {%- endfor -%}
+    {% endfor %}
+
+</main>

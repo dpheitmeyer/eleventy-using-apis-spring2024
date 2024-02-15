@@ -1,0 +1,16 @@
+---
+title: Instructors
+layout: base
+---
+<main>
+{% for i in instructors %}
+{{ i }}
+{%- if forloop.last == false -%},{%- endif -%} 
+{% comment %}
+    use forloop variable in for 
+     to deal with trailing comma 
+     https://liquidjs.com/tags/for.html
+{% endcomment %}
+{% endfor %}
+
+</main>
