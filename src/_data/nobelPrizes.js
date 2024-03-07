@@ -27,9 +27,11 @@ module.exports = async function () {
   console.log(requestUrl);
   try {
     let prizesData = await eleventyFetch(requestUrl, {
+      fetchOptions: {"method": "GET"},
       duration: "1d",
       type: "json"
     });
+    //console.log(prizesData);
     return(prizesData);
   } catch (err) {
     console.error("Something went wrong with request\n" + requestUrl);

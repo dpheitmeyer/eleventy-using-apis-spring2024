@@ -1,0 +1,10 @@
+---
+title: Nobel Laureates
+layout: base
+---
+<main>
+    {% for person in laureates.laureates %}
+        {{- person.knownName.en -}}
+        {{- person.orgName.en -}},
+    {% endfor %}
+</main>
